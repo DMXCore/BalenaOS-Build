@@ -1,7 +1,5 @@
 #!/bin/sh
 
-git -C /home/build/balena-raspberrypi/ pull
-
 # Set docker permissions
 sudo chmod 777 /var/run/docker.sock
 
