@@ -1,0 +1,8 @@
+#!/bin/sh
+
+git -C /home/build/balena-raspberrypi/ pull
+
+# Set docker permissions
+sudo chmod 777 /var/run/docker.sock
+
+docker run -u $(id -u):$(id -g) -v /var/run/docker.sock:/var/run/docker.sock -v /home/build/balena-raspberrypi:/home/build/balena-raspberrypi -it dmxcore-cm4 -m raspberrypicm4-ioboard

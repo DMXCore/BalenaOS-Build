@@ -1,0 +1,7 @@
+#!/bin/sh
+
+mkdir -p /home/build/balena-raspberrypi
+
+git clone --recursive https://github.com/balena-os/balena-raspberrypi.git /home/build/balena-raspberrypi
+
+git config --global --add safe.directory /home/build/balena-raspberrypi
